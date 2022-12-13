@@ -1,0 +1,19 @@
+header {
+  padding-top: 120px;
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #FFFFFF;
+  background-color: #e5f4e3;
+  background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+}
+
+#profile-card, #name-card {
+  display: flex;
+  /* border: 1px solid red; */
+}
+
+h2.name {
+  margin: 0;
+}
