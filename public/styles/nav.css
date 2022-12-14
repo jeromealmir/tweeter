@@ -11,21 +11,21 @@ nav {
   position: fixed;
 }
 
-#logo {
+nav .logo {
   font-family: 'Bungee', cursive;
   font-size: 1.5em;
 }
 
-#write-tweet-container {
+nav .write-tweet-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.write-tweet, .fa-solid, .fa-angles-down {
+nav .write-tweet, nav .fa-angles-down {
   font-size: 0.75em;
 }
 
-.fa-solid, .fa-angles-down {
+nav .fa-angles-down {
   color: #FF0000;
 }
