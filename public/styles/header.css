@@ -16,4 +16,5 @@ header #profile-card, header #name-card {
 
 header .name {
   margin: auto;
+  text-shadow: 2px 2px 2px grey;
 }
