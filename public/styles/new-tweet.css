@@ -26,8 +26,8 @@ section.new-tweet .new-tweet-button:hover {
 }
 
 section.new-tweet .new-tweet-button:active {
-.new-tweet-button:active {
-  background-color: #151c36;
+  border: 0.5px solid transparent;
+  background-color: #28386a;
 }
 
 section.new-tweet textarea#tweet-text {
