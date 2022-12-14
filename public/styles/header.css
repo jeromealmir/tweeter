@@ -9,11 +9,11 @@ header.main-header {
   background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
 }
 
-#profile-card, #name-card {
+header #profile-card, header #name-card {
   display: flex;
   /* border: 1px solid red; */
 }
 
-h2.name {
+header .name {
   margin: auto;
 }
