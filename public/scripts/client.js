@@ -43,12 +43,14 @@ $(document).ready(function(){
     return tweet;
   };
 
-  // loops through tweets in the data, process body template and append to tweets container
-  const renderTweets = (array) => {
-    for (const item of array) {
-      const tweet = createTweetElement(item)
-      $('.tweets-container').prepend(tweet);
-    }
+  // Render an array of tweets on the page
+  const renderTweets = (array, body) => {
+    // Loop through the tweets in the array
+    $(array).each(function(index) {
+      // Create a tweet element for each tweet in the array and prepend to the specified body element
+      const tweet = createTweetElement(array[index])
+      $(body).prepend(tweet);
+    })
     return;
   };
   
