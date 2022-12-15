@@ -10,8 +10,8 @@
 }
 
 .profile-header > div {
-  display: flex;
   /* border: 1px solid red; */
+  display: flex;
 }
 
 .profile-name {
