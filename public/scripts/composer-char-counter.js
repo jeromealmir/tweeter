@@ -1,19 +1,18 @@
 $(document).ready(function() {
 
-  // updates character limit value depending on current input length
   $('#tweet-text').on('keyup', function() {
     const input = $(this).val();
+
+    // Target the tweet counter element
     const counter = $(this).next().children('.tweet-counter');
 
-    // shows remaining character from 140 character limit
+    // Update the text of the tweet counter to show the remaining number of characters
     $(counter).text(140 - input.length);
 
-    // if tweet is more than 140 characters, change text-colour to red
-    if (input.length > 140) {
-      $(counter).css("color", "red");
-    } else {
-      $(counter).css("color", "inherit");
-    }
+    // If the input length is greater than 140 characters,
+    // set the color of the tweet counter to red
+    // to indicate that the user has exceeded the maximum limit
+    // Otherwise, set the color to the default (inherit)
+    (input.length > 140) ? $(counter).css("color", "red") : $(counter).css("color", "inherit");
   })
-
 });
