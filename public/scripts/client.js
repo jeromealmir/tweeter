@@ -8,12 +8,12 @@ $(document).ready(function(){
 
   const createTweetElement = (object) => {
     
-    // data variables from tweet object. Use && and || guard operators to prevent object retrieval typeError
-    const userName = object.user && object.user.name
-    const userAvatar = object.user && object.user.avatars
-    const userHandle = object.user && object.user.handle
-    const tweetContent = object.content && object.content.text
-    const creationDate = object['created_at']
+    // Check if the 'user' property exists on the object, and use a default value if it doesn't
+    const userName = object.hasOwnProperty('user') ? object.user.name : '';
+    const userAvatar = object.hasOwnProperty('user') ? object.user.avatars : '';
+    const userHandle = object.hasOwnProperty('user') ? object.user.handle : '';
+    const tweetContent = object.hasOwnProperty('content') ? object.content.text : '';
+    const creationDate = object.hasOwnProperty('created_at') ? object['created_at'] : ''; 
 
     //use timeago script to display time passed since tweet
     const time = timeago.format(creationDate);
