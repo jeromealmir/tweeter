@@ -1,20 +1,20 @@
-header.main-header {
-  padding-top: 120px;
-  width: inherit;
-  display: flex;
-  flex-direction: column;
+.profile-header {
   align-items: center;
-  color: #FFFFFF;
   background-color: #e5f4e3;
   background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  padding-top: 120px;
+  width: inherit;
 }
 
-header #profile-card, header #name-card {
+.profile-header > div {
   display: flex;
   /* border: 1px solid red; */
 }
 
-header .name {
+.profile-name {
   margin: auto;
   text-shadow: 2px 2px 2px grey;
 }
