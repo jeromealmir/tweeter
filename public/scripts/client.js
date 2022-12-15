@@ -52,10 +52,26 @@ $(document).ready(function(){
     return;
   };
   
-  // listens for submit event and handle POST request and send data to server as a query string
+  // listens for submit event
   $( "#tweet-form" ).submit(function( event ) {
-    $.post('/tweets', $(this).serialize())
     event.preventDefault();
+
+    const input = $(this).children();
+    const inputLength = input.val().length;
+    
+    // validation checks before tweet submission
+    if (inputLength <= 0) {
+      alert('Tweet cannot be empty!');
+      return;
+    }
+
+    if (inputLength > 140) {
+      alert('Tweet should be less than 140 characters!');
+      return;
+    }
+
+   // handle POST request via AJAX and send data to server as a query string
+    $.post('/tweets', $(this).serialize())
   });
 
   // fetch JSON data from /tweets and pass it to renderTweets for rendering
