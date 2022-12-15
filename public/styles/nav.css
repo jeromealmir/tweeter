@@ -19,11 +19,8 @@ nav {
 .write-tweet-container {
   align-items: center;
   display: flex;
-  flex-direction: column;
-}
-
-.write-tweet-container > * {
   font-size: 0.75em;
+  flex-direction: column;
 }
 
 .fa-angles-down {
