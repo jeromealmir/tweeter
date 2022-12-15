@@ -72,12 +72,13 @@ $(document).ready(function(){
       return;
     }
 
-    // handle POST request via AJAX and send data to server as a query string
-    $.post('/tweets', $(this).serialize());
-
-    // // fetch submitted tweet after submission and add to page
-    $.get('/tweets')
-      .then(response => {
+    // Handle the POST request using AJAX and format data as query string
+    $.post('/tweets', $(this).serialize())
+      // .done ensures POST request was successful before fetching data back
+      .done(function(response) {
+        // Fetch the submitted tweet and add it to the page
+        $.get('/tweets')
+          .then(response => {
         const $lastIndex = $(response).last()
         renderTweets($lastIndex)
       });
