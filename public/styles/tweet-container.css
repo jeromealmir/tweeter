@@ -1,21 +1,21 @@
-.tweets-container {
+.tweet {
   border: 2px solid gray;
   font-size: 0.75em;
   margin: 20px 0 20px 0;
   padding: 20px;
 }
 
-.tweets-container:hover {
+.tweet:hover {
   box-shadow: 5px 5px 5px grey;
 }
 
-.tweets-container header {
+.tweet header {
   display: flex;
   font-weight: bolder;
   justify-content: flex-start;
 }
 
-.tweets-container header > span {
+.tweet header > span {
   padding: 10px;
 }
 
@@ -31,7 +31,7 @@
   padding: 20px;
 }
 
-.tweets-container footer {
+.tweet footer {
   display: flex;
   font-size: 0.6em;
   justify-content: space-between;
