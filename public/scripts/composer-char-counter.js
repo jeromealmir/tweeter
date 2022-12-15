@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   $('#tweet-text').on('keyup', function() {
     const input = $(this).val();
-    const counter = $(this).next().children('output.counter');
+    const counter = $(this).next().children('.tweet-counter');
     $(counter).text(140 - input.length);
     
     if (input) {
