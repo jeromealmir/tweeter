@@ -70,8 +70,15 @@ $(document).ready(function(){
       return;
     }
 
-   // handle POST request via AJAX and send data to server as a query string
-    $.post('/tweets', $(this).serialize())
+    // handle POST request via AJAX and send data to server as a query string
+    $.post('/tweets', $(this).serialize());
+
+    // // fetch submitted tweet after submission and add to page
+    $.get('/tweets')
+      .then(response => {
+        const $lastIndex = $(response).last()
+        renderTweets($lastIndex)
+      });
   });
 
   // fetch JSON data from /tweets and pass it to renderTweets for rendering
