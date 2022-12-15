@@ -41,7 +41,7 @@ $(document).ready(function(){
 
     // tweet body template
     const tweet = `
-    <article class="tweets-container">
+    <article class="tweet">
         <header>
           <img src="${userAvatar}" alt="user-avatar" width="50" height="50">
           <span class="tweet-user-name">${userName}</span>
@@ -68,7 +68,7 @@ $(document).ready(function(){
   const renderTweets = (array) => {
     for (const item of array) {
       const $tweet = createTweetElement(item)
-      $('main').append($tweet);
+      $('.tweets-container').append($tweet);
     }
     return;
   };
