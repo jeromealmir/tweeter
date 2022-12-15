@@ -80,14 +80,16 @@ $(document).ready(function(){
         $.get('/tweets')
           .then(response => {
         const $lastIndex = $(response).last()
-        renderTweets($lastIndex)
+            // Render the tweet in the '.tweets-container' element
+            renderTweets($lastIndex, '.tweets-container')
+          });
       });
-  });
 
   // fetch JSON data from /tweets and pass it to renderTweets for rendering
   const loadtweets = (json) => {
     $.get(json)
-      .then(response => renderTweets(response));
+    // Render the tweets in the '.tweets-container' element
+      .then(response => renderTweets(response, '.tweets-container'));
   };
 
   loadtweets('/tweets');
