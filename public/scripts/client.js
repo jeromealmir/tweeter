@@ -9,11 +9,11 @@ $(document).ready(function(){
   const createTweetElement = (object) => {
     
     // data variables from tweet object. Use && and || guard operators to prevent object retrieval typeError
-    const userName = object.user && object.user.name || 'anonymous';
-    const userAvatar = object.user && object.user.avatars || 'https://i.imgur.com/gueO6ye.png';
-    const userHandle = object.user && object.user.handle || '@anonymous';
-    const tweetContent = object.content && object.content.text || 'Lorem ipsum dolor sit amet, consectetur adipiscing elit';
-    const creationDate = object['created_at'] || '0';
+    const userName = object.user && object.user.name
+    const userAvatar = object.user && object.user.avatars
+    const userHandle = object.user && object.user.handle
+    const tweetContent = object.content && object.content.text
+    const creationDate = object['created_at']
 
     //use timeago script to display time passed since tweet
     const time = timeago.format(creationDate);
