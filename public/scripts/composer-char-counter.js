@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+  // Listen for a 'keyup' event text input area
   $('#tweet-text').on('keyup', function() {
     const input = $(this).val();
 
