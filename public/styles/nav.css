@@ -1,31 +1,31 @@
 nav {
+  align-items: flex-end;
   background-color: #4056A1;
   color: #FFFFFF;
-  height: 120px;
-  width: 100vw;
-  padding: 0 1.5em 1em 1.5em;
   display: flex;
   flex-flow: row wrap;
+  height: 120px;
   justify-content: space-between;
-  align-items: flex-end;
+  padding: 0 1.5em 1em 1.5em;
   position: fixed;
+  width: 100vw;
 }
 
-nav #logo {
+.logo {
   font-family: 'Bungee', cursive;
   font-size: 1.5em;
 }
 
-nav .write-tweet-container {
+.write-tweet-container {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
-nav .write-tweet, nav .fa-angles-down {
+.write-tweet-container > * {
   font-size: 0.75em;
 }
 
-nav .fa-angles-down {
+.fa-angles-down {
   color: #FF0000;
 }
