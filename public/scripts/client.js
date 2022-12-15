@@ -39,6 +39,9 @@ $(document).ready(function(){
     const tweetContent = object.content && object.content.text || 'Lorem ipsum dolor sit amet, consectetur adipiscing elit';
     const creationDate = object['created_at'] || '0';
 
+    //use timeago script to display time passed since tweet
+    const time = timeago.format(creationDate);
+
     // tweet body template
     const tweet = `
     <article class="tweet">
@@ -51,7 +54,7 @@ $(document).ready(function(){
         ${tweetContent}
         </p>
         <footer>
-          <span>${creationDate} days ago</span>
+          <time class="timeago">${time}</time>
           <span class="tweet-footer-icons">
             <i class="fa-solid fa-flag"></i>
             <i class="fa-solid fa-retweet"></i>
