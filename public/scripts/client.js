@@ -72,7 +72,10 @@ $(document).ready(function(){
     }
     return;
   };
-
-  renderTweets(data);
-});
+  
+  // listens for submit event and handle POST request and send data to server as a query string
+  $( "#tweet-form" ).submit(function( event ) {
+    $.post('/tweets', $(this).serialize())
+    event.preventDefault();
+  });
 
