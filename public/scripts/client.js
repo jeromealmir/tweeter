@@ -79,3 +79,11 @@ $(document).ready(function(){
     event.preventDefault();
   });
 
+  // fetch JSON data from /tweets and pass it to renderTweets for rendering
+  const loadtweets = (json) => {
+    $.get(json)
+      .then(response => renderTweets(response));
+  };
+
+  loadtweets('/tweets');
+});
