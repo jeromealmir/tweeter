@@ -15,10 +15,10 @@ $(document).ready(function(){
     const tweetContent = object.hasOwnProperty('content') ? object.content.text : '';
     const creationDate = object.hasOwnProperty('created_at') ? object['created_at'] : ''; 
 
-    //use timeago script to display time passed since tweet
+    // Use the timeago script to format the creation date
     const time = timeago.format(creationDate);
 
-    // tweet body template
+    // Create the tweet body using template literals
     const tweet = `
     <article class="tweet">
         <header>
@@ -54,15 +54,15 @@ $(document).ready(function(){
     return;
   };
   
-  // listens for submit event
+  // Listen for the submit event of the tweet form
   $( "#tweet-form" ).submit(function( event ) {
     event.preventDefault();
 
     const input = $(this).children();
     const inputLength = input.val().length;
     
-    // validation checks before tweet submission
-    if (inputLength <= 0) {
+    // Validate the input before submitting the tweet
+    if (inputLength === 0) {
       alert('Tweet cannot be empty!');
       return;
     }
@@ -79,18 +79,22 @@ $(document).ready(function(){
         // Fetch the submitted tweet and add it to the page
         $.get('/tweets')
           .then(response => {
-        const $lastIndex = $(response).last()
+            // Get the last tweet in the response
+            const $lastIndex = $(response).last()
             // Render the tweet in the '.tweets-container' element
             renderTweets($lastIndex, '.tweets-container')
           });
       });
 
-  // fetch JSON data from /tweets and pass it to renderTweets for rendering
+  });
+
+  // Load tweets from the specified JSON URL
   const loadtweets = (json) => {
     $.get(json)
     // Render the tweets in the '.tweets-container' element
       .then(response => renderTweets(response, '.tweets-container'));
   };
 
+  // Load tweets from the '/tweets' URL
   loadtweets('/tweets');
 });
