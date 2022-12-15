@@ -30,13 +30,16 @@ $(document).ready(function(){
     }
   ]
 
-  const createTweetElement = (object, callback) => {
+  const createTweetElement = (object) => {
+
+    // data variables from tweet object. Use && and || guard operators to prevent object retrieval typeError
     const userName = object.user && object.user.name || 'anonymous';
     const userAvatar = object.user && object.user.avatars || 'https://i.imgur.com/gueO6ye.png';
     const userHandle = object.user && object.user.handle || '@anonymous';
     const tweetContent = object.content && object.content.text || 'Lorem ipsum dolor sit amet, consectetur adipiscing elit';
     const creationDate = object['created_at'] || '0';
 
+    // tweet body template
     const tweet = `
     <article class="tweets-container">
         <header>
@@ -61,6 +64,7 @@ $(document).ready(function(){
     return tweet;
   };
 
+  // loops through tweets in the data, process body template and append to tweets container
   const renderTweets = (array) => {
     for (const item of array) {
       const $tweet = createTweetElement(item)
