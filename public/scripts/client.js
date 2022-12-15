@@ -6,32 +6,8 @@
 
 $(document).ready(function(){
 
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png",
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ]
-
   const createTweetElement = (object) => {
-
+    
     // data variables from tweet object. Use && and || guard operators to prevent object retrieval typeError
     const userName = object.user && object.user.name || 'anonymous';
     const userAvatar = object.user && object.user.avatars || 'https://i.imgur.com/gueO6ye.png';
