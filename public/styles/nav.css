@@ -23,6 +23,22 @@ nav {
   flex-direction: column;
 }
 
+.compose-tweet {
+  position: relative;
+  z-index: 1;
+}
+
 .fa-solid.fa-angles-down {
   color: #FF0000;
+  position: relative;
+  top: 1px;
+  z-index: -1;
+  -webkit-transition: top 0.4s;
+  -moz-transition: top 0.4s;
+  -o-transition: top 0.4s;
+  transition: top 0.4s;
+}
+
+.compose-tweet:hover+.fa-solid.fa-angles-down {
+  top: 10px;
 }
