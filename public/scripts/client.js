@@ -91,7 +91,8 @@ $(document).ready(function() {
             // Get the last tweet in the response
             const $lastIndex = $(response).last();
             // Render the tweet in the '.tweets-container' element
-            renderTweets($lastIndex, '.tweets-container');
+            renderTweets($lastIndex, '.tweets-container', 'add-tweet');
+            $('.add-tweet').slideDown();
           });
       });
 
@@ -107,7 +108,7 @@ $(document).ready(function() {
   const loadtweets = (json) => {
     $.get(json)
     // Render the tweets in the '.tweets-container' element
-      .then(response => renderTweets(response, '.tweets-container'));
+      .then(response => renderTweets(response, '.tweets-container', 'tweet'));
   };
 
   // Load tweets from the '/tweets' URL
