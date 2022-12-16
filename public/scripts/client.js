@@ -13,7 +13,7 @@ $(document).ready(function(){
     const userAvatar = object.hasOwnProperty('user') ? object.user.avatars : '';
     const userHandle = object.hasOwnProperty('user') ? object.user.handle : '';
     const tweetContent = object.hasOwnProperty('content') ? object.content.text : '';
-    const creationDate = object.hasOwnProperty('created_at') ? object['created_at'] : ''; 
+    const creationDate = object.hasOwnProperty('created_at') ? object['created_at'] : '';
 
     // Use the timeago script to format the creation date
     const time = timeago.format(creationDate);
@@ -48,14 +48,14 @@ $(document).ready(function(){
     // Loop through the tweets in the array
     $(array).each(function(index) {
       // Create a tweet element for each tweet in the array and prepend to the specified body element
-      const tweet = createTweetElement(array[index])
+      const tweet = createTweetElement(array[index]);
       $(body).prepend(tweet);
-    })
+    });
     return;
   };
   
   // Listen for the submit event of the tweet form
-  $( "#tweet-form" ).submit(function( event ) {
+  $("#tweet-form").submit(function(event) {
     event.preventDefault();
 
     const input = $(this).children();
@@ -75,14 +75,14 @@ $(document).ready(function(){
     // Handle the POST request using AJAX and format data as query string
     $.post('/tweets', $(this).serialize())
       // .done ensures POST request was successful before fetching data back
-      .done(function(response) {
+      .done(function() {
         // Fetch the submitted tweet and add it to the page
         $.get('/tweets')
           .then(response => {
             // Get the last tweet in the response
-            const $lastIndex = $(response).last()
+            const $lastIndex = $(response).last();
             // Render the tweet in the '.tweets-container' element
-            renderTweets($lastIndex, '.tweets-container')
+            renderTweets($lastIndex, '.tweets-container');
           });
       });
 
