@@ -1,0 +1,9 @@
+.fa-solid.fa-circle-chevron-up {
+  bottom: 0;
+  color: red;
+  display: none;
+  font-size: 2em;
+  padding: 10px;
+  position: fixed;
+  right: 0;
+}
