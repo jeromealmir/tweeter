@@ -61,7 +61,7 @@ $(document).ready(function() {
     });
     return;
   };
-  
+
   // Listen for the submit event of the tweet form
   $("#tweet-form").submit(function(event) {
     event.preventDefault();
@@ -69,12 +69,13 @@ $(document).ready(function() {
     const input = $(this).children();
     const inputLength = input.val().length;
     
-    // Validate the input before submitting the tweet
+    // Check if input is empty when submitting the tweet and show message if error found
     if (inputLength === 0) {
       alert('Tweet cannot be empty!');
       return;
     }
 
+    // Check if input is more than 140 characters when submitting the tweet and show message if error found
     if (inputLength > 140) {
       alert('Tweet should be less than 140 characters!');
       return;
