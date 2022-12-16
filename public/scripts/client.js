@@ -13,7 +13,7 @@ $(document).ready(function() {
     return div.innerHTML;
   };
 
-  const createTweetElement = (object) => {
+  const createTweetElement = (object, class_) => {
     
     // Check if the 'user' property exists on the object, and use a default value if it doesn't
     const userName = object.hasOwnProperty('user') ? object.user.name : '';
@@ -30,7 +30,7 @@ $(document).ready(function() {
 
     // Create the tweet body using template literals
     const tweet = `
-    <article class="tweet">
+    <article class="${class_}">
         <header>
           <img src="${userAvatar}" alt="user-avatar" width="50" height="50">
           <span class="tweet-user-name">${userName}</span>
@@ -52,11 +52,11 @@ $(document).ready(function() {
   };
 
   // Render an array of tweets on the page
-  const renderTweets = (array, body) => {
+  const renderTweets = (array, body, class_) => {
     // Loop through the tweets in the array
     $(array).each(function(index) {
       // Create a tweet element for each tweet in the array and prepend to the specified body element
-      const tweet = createTweetElement(array[index]);
+      const tweet = createTweetElement(array[index], class_);
       $(body).prepend(tweet);
     });
     return;
