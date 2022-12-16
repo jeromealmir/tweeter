@@ -15,19 +15,21 @@
 }
 
 .new-tweet .tweet-btn {
-  background-color: #4056A1;
-  border: 1px;
+  background-color: white;
+  border: 2px solid #4056A1;
   border-radius: 5px;
-  color: white;
+  color: #4056A1;
+  transition: all 0.2s;
 }
 
 .new-tweet .tweet-btn:hover {
   background-color: #4f6cca;
+  color: white;
 }
 
 .new-tweet .tweet-btn:active {
   background-color: #28386a;
-  border: 0.5px solid transparent;
+  border: 0.1px solid transparent;
 }
 
 .new-tweet #tweet-text {
