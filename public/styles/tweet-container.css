@@ -10,7 +10,7 @@
   text-align: center;
 }
 
-.tweet {
+.tweet, .add-tweet {
   border: 2px solid gray;
   font-size: 0.75em;
   margin: 20px 0 20px 0;
@@ -18,17 +18,21 @@
   transition: box-shadow 0.2s ease-in-out;
 }
 
-.tweet:hover {
+.add-tweet {
+  display: none;
+}
+
+.tweet:hover, .add-tweet:hover {
   box-shadow: 5px 5px 5px grey;
 }
 
-.tweet header {
+.tweet header, .add-tweet header {
   display: flex;
   font-weight: bolder;
   justify-content: flex-start;
 }
 
-.tweet header > span {
+.tweet header > span, .add-tweet header > span {
   padding: 10px;
 }
 
@@ -44,7 +48,7 @@
   padding: 20px;
 }
 
-.tweet footer {
+.tweet footer, .add-tweet footer {
   display: flex;
   font-size: 0.6em;
   justify-content: space-between;
