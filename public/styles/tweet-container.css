@@ -59,6 +59,13 @@
   padding: 2px;
 } 
 
+.tweet-footer-icons > i {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
 .tweet-footer-icons > i:hover {
   color: red;
 }
