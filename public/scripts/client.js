@@ -109,6 +109,19 @@ $(document).ready(function() {
     $('.tweet-container').slideToggle();
   });
 
+  $(window).scroll(function() {
+    if ($(document).scrollTop() > 500) {
+      $(".scroll-up").fadeIn(300);
+    } else {
+      $(".scroll-up").fadeOut(300);
+    }
+  });
+
+  $(".scroll-up").click(function() {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+    return false;
+  });
+
   // Load tweets from the specified JSON URL
   const loadtweets = (json) => {
     $.get(json)
