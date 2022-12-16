@@ -67,6 +67,8 @@
   </header>
     <!-- Page-specific (main) content here -->
     <main>
+      <div class="form-error-empty"><i class="fa-solid fa-triangle-exclamation"></i> Tweet cannot be empty!</div>
+      <div class="form-error-charlimit"><i class="fa-solid fa-triangle-exclamation"></i> Tweet should be less than 140 characters!</div>
       <section class="new-tweet">
         <form action="/tweets" method="POST" id="tweet-form">
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
