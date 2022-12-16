@@ -71,13 +71,13 @@ $(document).ready(function() {
     
     // Check if input is empty when submitting the tweet and show message if error found
     if (inputLength === 0) {
-      alert('Tweet cannot be empty!');
+      $('.form-error-empty').slideDown();
       return;
     }
 
     // Check if input is more than 140 characters when submitting the tweet and show message if error found
     if (inputLength > 140) {
-      alert('Tweet should be less than 140 characters!');
+      $('.form-error-charlimit').slideDown();
       return;
     }
 
@@ -95,6 +95,12 @@ $(document).ready(function() {
           });
       });
 
+  });
+
+  // Hide error message when textarea is clicked
+  $('#tweet-text').on("click", function() {
+    $('.form-error-empty').slideUp()
+    $('.form-error-charlimit').slideUp()
   });
 
   // Load tweets from the specified JSON URL
