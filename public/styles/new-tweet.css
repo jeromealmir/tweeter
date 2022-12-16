@@ -43,9 +43,10 @@
   background-color: transparent;
   border-width: 0 0 2px;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 15px;
-  height: 25px;
-  min-height: 25px;
+  font-size: 1em;
+  font-weight: bolder;
+  height: 40px;
+  min-height: 40px;
   resize: vertical;
 	width: 100%;
 }
