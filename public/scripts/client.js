@@ -7,7 +7,7 @@
 $(document).ready(function() {
 
   // Function to sterilize user input to prevent XSS
-  const escape = function (str) {
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -100,8 +100,8 @@ $(document).ready(function() {
 
   // Hide error message when textarea is clicked
   $('#tweet-text').on("click", function() {
-    $('.form-error-empty').slideUp()
-    $('.form-error-charlimit').slideUp()
+    $('.form-error-empty').slideUp();
+    $('.form-error-charlimit').slideUp();
   });
 
   // Load tweets from the specified JSON URL
