@@ -1,3 +1,15 @@
+.form-error-empty, .form-error-charlimit {
+  background-color: #FFBABA;
+  border: 1px solid;
+  color: #D8000C;
+  display: none;
+  font-size: 0.6em;
+  font-weight: bold;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+}
+
 .tweet {
   border: 2px solid gray;
   font-size: 0.75em;
