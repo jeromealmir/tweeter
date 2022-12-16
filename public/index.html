@@ -51,7 +51,7 @@
     <nav>
       <span class="logo">tweeter</span>
       <div class="write-tweet-container">
-        <span><b>Write</b> a new tweet</span>
+        <span class="compose-tweet"><b>Write</b> a new tweet</span>
         <i class="fa-solid fa-angles-down"></i>
       </div>
     </nav>
@@ -69,14 +69,16 @@
     <main>
       <div class="form-error-empty"><i class="fa-solid fa-triangle-exclamation"></i> Tweet cannot be empty!</div>
       <div class="form-error-charlimit"><i class="fa-solid fa-triangle-exclamation"></i> Tweet should be less than 140 characters!</div>
-      <section class="new-tweet">
-        <form action="/tweets" method="POST" id="tweet-form">
-          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-          <div class="button-counter">
-            <button type="submit" class="tweet-btn">Tweet</button>
-            <output name="counter" class="tweet-counter" for="tweet-text">140</output>
-          </div>
-        </form>
+      <section class="tweet-container">
+        <div class="new-tweet">
+          <form action="/tweets" method="POST" id="tweet-form">
+            <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+            <div class="button-counter">
+              <button type="submit" class="tweet-btn">Tweet</button>
+              <output name="counter" class="tweet-counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </div>
       </section>
       <span class="tweets-container">
       </span>
