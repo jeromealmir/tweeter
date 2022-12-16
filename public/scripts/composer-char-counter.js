@@ -15,5 +15,5 @@ $(document).ready(function() {
     // to indicate that the user has exceeded the maximum limit
     // Otherwise, set the color to the default (inherit)
     (input.length > 140) ? $(counter).css("color", "red") : $(counter).css("color", "inherit");
-  })
+  });
 });
