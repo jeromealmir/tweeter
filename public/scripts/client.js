@@ -4,7 +4,14 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-$(document).ready(function(){
+$(document).ready(function() {
+
+  // Function to sterilize user input to prevent XSS
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 
   const createTweetElement = (object) => {
     
@@ -14,6 +21,9 @@ $(document).ready(function(){
     const userHandle = object.hasOwnProperty('user') ? object.user.handle : '';
     const tweetContent = object.hasOwnProperty('content') ? object.content.text : '';
     const creationDate = object.hasOwnProperty('created_at') ? object['created_at'] : '';
+
+    // Sterilized input
+    const safeHTML = `<p class="tweet-body">${escape(tweetContent)}</p>`;
 
     // Use the timeago script to format the creation date
     const time = timeago.format(creationDate);
@@ -26,9 +36,7 @@ $(document).ready(function(){
           <span class="tweet-user-name">${userName}</span>
           <span class="tweet-user-handle">${userHandle}</span>
         </header>
-        <p class="tweet-body">
-        ${tweetContent}
-        </p>
+        ${safeHTML}
         <footer>
           <time class="timeago">${time}</time>
           <span class="tweet-footer-icons">
