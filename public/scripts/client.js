@@ -104,6 +104,11 @@ $(document).ready(function() {
     $('.form-error-charlimit').slideUp();
   });
 
+  // Toggle tweet composer when "Write a new tweet" button is clicked
+  $('.compose-tweet').on("click", function() {
+    $('.tweet-container').slideToggle();
+  });
+
   // Load tweets from the specified JSON URL
   const loadtweets = (json) => {
     $.get(json)
