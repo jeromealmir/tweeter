@@ -1,3 +1,4 @@
+/* navigational bar styling */
 nav {
   background-color: #4056A1;
   color: #FFFFFF;
@@ -6,6 +7,7 @@ nav {
   width: 100vw;
 }
 
+/* tweeter logo styling */
 .logo {
   font-family: 'Bungee', cursive;
   font-size: 1.5em;
@@ -16,22 +18,21 @@ nav {
   cursor: pointer;
 }
 
-.compose-tweet {
-  position: relative;
-  z-index: 1;
-}
-
+/* new tweet button chevron arrows styling */
 .fa-solid.fa-angles-down {
-  color: #FF0000;
+  color: lightskyblue;
   position: relative;
   top: 1px;
   z-index: -1;
+
+  /* add smooth arrow down/up animation on hover. use webkit for cross-browser compatability  */
   -webkit-transition: top 0.4s;
   -moz-transition: top 0.4s;
   -o-transition: top 0.4s;
   transition: top 0.4s;
 }
 
+/* specify arrow animation travel distance */
 .compose-tweet:hover+.fa-solid.fa-angles-down {
   top: 10px;
 }
