@@ -14,6 +14,7 @@
   border: 2px solid gray;
   font-size: 0.75em;
   margin: 20px 0 20px 0;
+  overflow-wrap: break-word;
   padding: 20px;
   -webkit-transition: box-shadow 0.2s ease-in-out;
   -moz-transition: box-shadow 0.2s ease-in-out;
