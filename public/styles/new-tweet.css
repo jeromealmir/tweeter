@@ -1,9 +1,4 @@
-.tweet-container {
-  display: none;
-}
-
 .new-tweet {
-  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   padding: 20px 0 20px 0;
@@ -11,7 +6,6 @@
 }
 
 .new-tweet .button-counter {
-  /* border: 1px solid red; */
   display: flex;
   font-family: 'Bungee';
   justify-content: space-between;
