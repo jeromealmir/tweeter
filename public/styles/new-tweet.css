@@ -1,3 +1,4 @@
+/* styling for tweet composer box */
 .new-tweet {
   display: flex;
   flex-direction: column;
@@ -5,6 +6,7 @@
   width: 100%;
 }
 
+/* tweet composer character counter */
 .new-tweet .button-counter {
   display: flex;
   font-family: 'Bungee';
@@ -12,27 +14,33 @@
   width: 100%;
 }
 
+/* tweet composer submit button */
 .new-tweet .tweet-btn {
   background-color: white;
   border: 2px solid #4056A1;
   border-radius: 5px;
   color: #4056A1;
+/* submit button animation on click */
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
 
+/* simple animation on mouse hover to empahasize focus*/
 .new-tweet .tweet-btn:hover {
   background-color: #4f6cca;
   color: white;
+  cursor: pointer;
 }
 
+/* change button color on click */
 .new-tweet .tweet-btn:active {
   background-color: #28386a;
   border: 0.1px solid transparent;
 }
 
+/* styling for tweet composter text box placeholder */
 .new-tweet #tweet-text {
   background-color: transparent;
   border-width: 0 0 2px;
