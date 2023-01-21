@@ -62,6 +62,7 @@
     <header class="profile-header">
       <div class="header-bg-card">
         <div>
+          <!-- user profile photo -->
           <img src="/images/profile-hex.png"> 
         </div>
         <div>
@@ -72,12 +73,15 @@
   </header>
     <!-- Page-specific (main) content here -->
     <main>
+      <!-- error message prompts. initially hidden and only shown on trigger -->
       <div class="form-error-empty"><i class="fa-solid fa-triangle-exclamation"></i> Tweet cannot be empty!</div>
       <div class="form-error-charlimit"><i class="fa-solid fa-triangle-exclamation"></i> Tweet should be less than 140 characters!</div>
       <section class="tweet-container">
         <div class="new-tweet">
+          <!-- text for for new tweets -->
           <form action="/tweets" method="POST" id="tweet-form">
             <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+            <!-- container for tweet submit button and text character counter -->
             <div class="button-counter">
               <button type="submit" class="tweet-btn">Tweet</button>
               <output name="counter" class="tweet-counter" for="tweet-text">140</output>
@@ -85,10 +89,12 @@
           </form>
         </div>
       </section>
+      <!-- container for pre-loaded / previous tweets -->
       <span class="tweets-container">
       </span>
     </main>
     <footer>
+      <!-- scroll to top button -->
       <i class="fa-solid fa-circle-chevron-up scroll-up"></i>
     </footer>
   </body>
