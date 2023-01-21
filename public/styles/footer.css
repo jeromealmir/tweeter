@@ -8,3 +8,8 @@
   position: fixed;
   right: 0;
 }
+
+/* simple animation on mouse hover to empahasize focus*/
+.fa-solid.fa-circle-chevron-up:hover {
+  cursor: pointer;
+}
