@@ -1,20 +1,41 @@
+/* background image placeholder for smaller screens */
 .profile-header {
-  align-items: center;
-  background-color: #e5f4e3;
-  background-image: url("https://www.transparenttextures.com/patterns/padded.png");
   color: #FFFFFF;
+}
+
+/* background image placeholder for large screens */
+.header-bg-card {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  padding-top: 120px;
-  width: inherit;
 }
 
-.profile-header > div {
-  /* border: 1px solid red; */
-  display: flex;
-}
-
+/* user name styling */
 .profile-name {
   margin: auto;
+  padding: 10px 0 10px 0;
   text-shadow: 2px 2px 2px grey;
+}
+
+/* set background image under profile-header for smaller screens */
+@media only screen and (max-width: 1024px) {
+  .profile-header {
+    /* alternative bg-color: rgb(200, 225, 235); */
+    background: rgb(228, 228, 228) url("https://www.transparenttextures.com/patterns/diagonal-striped-brick.png");
+    padding-top: 110px;
+  }
+}
+
+/* set background image under header-bg-card for larger screens */
+ @media only screen and (min-width: 1025px) {
+   .profile-header {
+    margin-top: 5.3em;
+    margin-left: 5em;
+    }
+
+    .header-bg-card {
+      /* alternative bg-color: rgb(200, 225, 235); */
+      background: rgb(228, 228, 228) url("https://www.transparenttextures.com/patterns/diagonal-striped-brick.png");
+      padding-top: 10px;
+    }
 }
