@@ -1,5 +1,4 @@
 nav {
-  align-items: flex-end;
   background-color: #4056A1;
   color: #FFFFFF;
   display: flex;
@@ -41,4 +40,59 @@ nav {
 
 .compose-tweet:hover+.fa-solid.fa-angles-down {
   top: 10px;
+}
+
+/* layout specifications for screens smaller than 420px */
+@media only screen and (max-width: 420px) {
+
+  /* center tweeter logo and increase font size for readability*/
+  nav {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    height: 90px;
+  }
+  .logo {
+    align-self: center;
+    font-size: 2em;
+  }
+
+  /* hide compose tweet button from navbar and show tweet composer immediately on load for optimized user experience */
+  .write-tweet-container {
+    display: none;
+  }
+
+  /* dynamically adjust tweet composer placeholder font size to viewport size */
+  .new-tweet #tweet-text {
+    font-size: 6vw !important;
+  }
+
+  /* add extra padding to profile-header for separation */
+  .profile-header {
+    padding-top: 0px;
+  }
+}
+
+
+/* layout specifications for screens larger than 420px */
+@media only screen and (min-width: 421px) {
+  nav {
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.5em 1em 1.5em;
+  }
+
+  /* new tweet button is displayed in the navbar on page load */
+  .write-tweet-container {
+    align-items: center;
+    display: flex;
+    font-size: 0.75em;
+    flex-direction: column;
+  }
+
+  /* hide tweet composer by default on page load and only show when new tweet button is clicked */
+  .tweet-container {
+    display: none;
+  }
 }
