@@ -1,3 +1,4 @@
+/* styling for tweet composer error prompt. default is display: none and only displayed when triggered*/
 .form-error-empty, .form-error-charlimit {
   background-color: #FFBABA;
   border: 1px solid;
@@ -10,22 +11,26 @@
   text-align: center;
 }
 
+/* styling for new tweet */
 .tweet, .add-tweet {
   border: 2px solid gray;
   font-size: 0.75em;
   margin: 20px 0 20px 0;
   overflow-wrap: break-word;
   padding: 20px;
+  /* animation when new tweet is entered */
   -webkit-transition: box-shadow 0.2s ease-in-out;
   -moz-transition: box-shadow 0.2s ease-in-out;
   -o-transition: box-shadow 0.2s ease-in-out;
   transition: box-shadow 0.2s ease-in-out;
 }
 
+/* hide new tweet initially to display animation */
 .add-tweet {
   display: none;
 }
 
+/* add hover effect to emphasize focus on mouse hover */
 .tweet:hover, .add-tweet:hover {
   background-color: white;
   box-shadow: 5px 5px 5px grey;
@@ -64,6 +69,7 @@
   padding: 2px;
 } 
 
+/* tweet activity buttons animate on hover*/
 .tweet-footer-icons > i {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
