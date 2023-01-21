@@ -80,21 +80,23 @@ $(document).ready(function() {
       $('.form-error-charlimit').slideDown();
       return;
     }
-
+    
     // Handle the POST request using AJAX and format data as query string
     $.post('/tweets', $(this).serialize())
-      // .done ensures POST request was successful before fetching data back
-      .done(function() {
-        // Fetch the submitted tweet and add it to the page
-        $.get('/tweets')
-          .then(response => {
-            // Get the last tweet in the response
-            const $lastIndex = $(response).last();
-            // Render the tweet in the '.tweets-container' element
-            renderTweets($lastIndex, '.tweets-container', 'add-tweet');
-            $('.add-tweet').slideDown();
-          });
+    // .done ensures POST request was successful before fetching data back
+    .done(function() {
+      // Fetch the submitted tweet and add it to the page
+      $.get('/tweets')
+      .then(response => {
+        // Get the last tweet in the response
+        const $lastIndex = $(response).last();
+        // Render the tweet in the '.tweets-container' element
+        renderTweets($lastIndex, '.tweets-container', 'add-tweet');
+        $('.add-tweet').slideDown();
       });
+    });
+    
+    input.val('')
 
   });
 
