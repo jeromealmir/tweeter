@@ -27,6 +27,7 @@
 }
 
 .tweet:hover, .add-tweet:hover {
+  background-color: white;
   box-shadow: 5px 5px 5px grey;
 }
 
