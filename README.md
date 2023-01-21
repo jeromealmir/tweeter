@@ -26,8 +26,8 @@ This app is powered by the following technologies:
 ## Notes
 
 - Tweet must be between 1 - 140 characters, otherwise an error prompt will show.
-- Tweet composer is hidden by default on tablet and desktop mode unless user is on mobile mode. To toggle tweet composer, click on the 'Write a Tweet' button.
-- If the user will scroll 500 pixels down, a handy scroll-to-top button will appear at the bottom right of the page to allow our user to jump back to the top of the page without having to scroll all the way back up.
+- Tweet composer is hidden by default on tablet and desktop mode and displayed on page load for mobile users. To toggle tweet composer, click on the 'Write a new tweet' button.
+- If the user will scroll down by 500pixels, a handy scroll-to-top button will appear at the bottom right of the page to allow our user to jump back to the top of the page without having to scroll all the way back up.
 
 | ![extra-features.gif](./docs/other-features.gif) |
 |:--:| 
@@ -40,11 +40,11 @@ This app is powered by the following technologies:
 
 | ![tweeter-tablet-view.png](./docs/tweeter-tablet-view.png) | 
 |:--:| 
-| Homepage (Condensed view: Tablet mode) |
+| Homepage (condensed view: Tablet mode) |
 
 | ![tweeter-phone-view.png](./docs/tweeter-phone-view.png) | 
 |:--:| 
-| Homepage (Condensed view: Smartphone mode) |
+| Homepage (condensed view: Smartphone mode) |
 
 ## Getting Started
 
