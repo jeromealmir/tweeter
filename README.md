@@ -1,6 +1,6 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone. The main page displays a tweet feed and has the ability for the user to post new tweets.
+Tweeter is a simple, single-page Twitter clone. The main page displays a tweet feed and has the ability for the user to post new tweet.
 
 This app is powered by the following technologies:
 
