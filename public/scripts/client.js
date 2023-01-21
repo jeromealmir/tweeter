@@ -109,6 +109,7 @@ $(document).ready(function() {
     $('.tweet-container').slideToggle();
   });
 
+  //add a scroll-to-top button when page is scrolled 500 pixels down
   $(window).scroll(function() {
     if ($(document).scrollTop() > 500) {
       $(".scroll-up").fadeIn(300);
@@ -117,6 +118,7 @@ $(document).ready(function() {
     }
   });
 
+  //add a smooth animation when page is scrolled back to top by clicking the scroll-to-top button
   $(".scroll-up").click(function() {
     $("html, body").animate({ scrollTop: 0 }, "slow");
     return false;
