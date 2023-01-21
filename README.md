@@ -29,7 +29,8 @@ This app is powered by the following technologies:
 - Tweet composer is hidden by default on tablet and desktop mode unless user is on mobile mode. To toggle tweet composer, click on the 'Write a Tweet' button.
 - If the user will scroll 500 pixels down, a handy scroll-to-top button will appear at the bottom right of the page to allow our user to jump back to the top of the page without having to scroll all the way back up.
 
-![extra-features.gif](./docs/other-features.gif)
+| ![extra-features.gif](./docs/other-features.gif) |
+|:--:| 
 
 ## App Screenshots
 
