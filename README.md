@@ -1,18 +1,66 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter is a simple, single-page Twitter clone. The main page displays a tweet feed and has the ability for the user to post new tweets.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+This app is powered by the following technologies:
+
+#### Front-End
+
+- HTML
+- CSS
+- Javascript
+- AJAX
+- jQuery
+
+#### Back-End
+
+- Express
+- Node
+
+## Features
+
+- Tweets are fetched aynschronously using AJAX and jQuery
+- Features element animations using jQuery and CSS for optimized user experience
+- Follows responsive web design principle and supports various screen sizes (Mobile, Table, Desktop, TV)
+
+## Notes
+
+- Tweet must be between 1 - 140 characters, otherwise an error prompt will show.
+- Tweet composer is hidden by default on tablet and desktop mode unless user is on mobile mode. To toggle tweet composer, click on the 'Write a Tweet' button.
+- If the user will scroll 500 pixels down, a handy scroll-to-top button will appear at the bottom right of the page to allow our user to jump back to the top of the page without having to scroll all the way back up.
+
+![extra-features.gif](./docs/other-features.gif)
+
+## App Screenshots
+
+| ![tweeter-desktop-view.png](./docs/tweeter-desktop-view.png) | 
+|:--:| 
+| Homepage (Desktop view) |
+
+| ![tweeter-tablet-view.png](./docs/tweeter-tablet-view.png) | 
+|:--:| 
+| Homepage (Condensed view: Tablet mode) |
+
+| ![tweeter-phone-view.png](./docs/tweeter-phone-view.png) | 
+|:--:| 
+| Homepage (Condensed view: Smartphone mode) |
 
 ## Getting Started
 
-1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
-2. Clone your repository onto your local device.
-3. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+1. Install dependencies using the `npm install` command.
+2. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
+3. Go to <http://localhost:8080/> in your browser.
+
 
 ## Dependencies
 
 - Express
 - Node 5.10.x or above
+- body-parser
+- chance
+- express
+- md5
+
+## Footnote
+
+This project was created and published by [Jerome Lagbas](https://github.com/jeromealmir) as part of the Web Development program at Lighthouse Labs.
