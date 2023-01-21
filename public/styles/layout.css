@@ -25,8 +25,24 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- main {
-  /* border: 1px solid red; */
-  margin: auto;
-  width: 90%;
- }
+ /*site layout for smaller screens: (tablet, mobile phone) */
+ @media only screen and (max-width: 1024px) {
+  main {
+    margin: auto;
+    width: 90%;
+   }
+}
+
+/*site layout for larger screens: desktop/laptops */
+ @media only screen and (min-width: 1025px) {
+  body {
+    display: flex;
+    justify-content: center;
+   }
+
+   /* Main content's width capped at 35em. Important for wider screens! */
+   main {
+    padding: 4.5em 5em 0 1em;
+    width: 35em;
+   }
+}
