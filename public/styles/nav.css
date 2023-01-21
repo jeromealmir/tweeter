@@ -11,11 +11,9 @@ nav {
   font-size: 1.5em;
 }
 
-.write-tweet-container {
-  align-items: center;
-  display: flex;
-  font-size: 0.75em;
-  flex-direction: column;
+/* change cursor to pointer on mouse hover to indicate clickable action */
+.compose-tweet:hover {
+  cursor: pointer;
 }
 
 .compose-tweet {
