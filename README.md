@@ -20,7 +20,7 @@ This app is powered by the following technologies:
 ## Features
 
 - Tweets are fetched aynschronously using AJAX and jQuery
-- Features element animations using jQuery and CSS for optimized user experience
+- Features element animations using jQuery and CSS for added user experience
 - Follows responsive web design principle and supports various screen sizes (Mobile, Table, Desktop, TV)
 
 ## Notes
