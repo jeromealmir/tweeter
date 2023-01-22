@@ -5,6 +5,7 @@ nav {
   height: 90px;
   position: fixed;
   width: 100vw;
+  z-index: 9999;
 }
 
 /* tweeter logo styling */
