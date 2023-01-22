@@ -35,7 +35,7 @@ This app is powered by the following technologies:
 
 ## App Screenshots
 
-| ![tweeter-desktop-view.png](./docs/tweeter-desktop-view.png) | 
+| ![tweeter-desktop-view.gif](./docs/tweeter-desktop-view.gif) | 
 |:--:| 
 | Homepage (Desktop view) |
 
