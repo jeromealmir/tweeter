@@ -117,6 +117,7 @@ $(document).ready(function() {
   // Toggle tweet composer when "Write a new tweet" button is clicked
   $('.compose-tweet').on("click", function() {
     $('.tweet-container').slideToggle();
+    $('#tweet-form').find( 'textarea' ).focus();
   });
 
   //add a scroll-to-top button when page is scrolled 500 pixels down
@@ -131,6 +132,7 @@ $(document).ready(function() {
   //add a smooth animation when page is scrolled back to top by clicking the scroll-to-top button
   $(".scroll-up").click(function() {
     $("html, body").animate({ scrollTop: 0 }, "slow");
+    $('#tweet-form').find( 'textarea' ).focus();
     return false;
   });
 
