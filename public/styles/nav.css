@@ -87,7 +87,7 @@ nav {
   }
 
   /* hide tweet composer by default on page load and only show when new tweet button is clicked */
-  .tweet-container {
+  .new-tweet {
     display: none;
   }
 }

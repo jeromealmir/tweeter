@@ -100,7 +100,7 @@ $(document).ready(function() {
 
   });
 
-  // Automatically adjust textbox according to input length
+  // Automatically resize textbox according to input length
   $("#tweet-text").each(function () {
     this.setAttribute("style", "height:" + (this.scrollHeight) + "px;overflow-y:hidden;");
   }).on("input", function () {
@@ -116,8 +116,8 @@ $(document).ready(function() {
 
   // Toggle tweet composer when "Write a new tweet" button is clicked
   $('.compose-tweet').on("click", function() {
-    $('.tweet-container').slideToggle();
-    $('#tweet-form').find( 'textarea' ).focus();
+    $('.new-tweet').slideToggle();
+    $('#tweet-form').find('textarea').focus();
   });
 
   //add a scroll-to-top button when page is scrolled 500 pixels down
