@@ -49,6 +49,6 @@
   font-weight: bolder;
   height: 40px;
   min-height: 40px;
-  resize: vertical;
+  resize: none;
 	width: 100%;
 }

@@ -100,6 +100,14 @@ $(document).ready(function() {
 
   });
 
+  // Automatically adjust textbox according to input length
+  $("#tweet-text").each(function () {
+    this.setAttribute("style", "height:" + (this.scrollHeight) + "px;overflow-y:hidden;");
+  }).on("input", function () {
+    this.style.height = 0;
+    this.style.height = (this.scrollHeight) + "px";
+  });
+
   // Hide error message when textarea is clicked
   $('#tweet-text').on("click", function() {
     $('.form-error-empty').slideUp();
